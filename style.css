@@ -39,19 +39,6 @@ h6 {
     overflow-wrap: break-word;
 }
 
-p {
-    text-wrap: pretty;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    text-wrap: balance;
-}
-
 #root,
 #__next {
     isolation: isolate;
@@ -158,7 +145,7 @@ a:hover {
 }
 
 p {
-    font-size: 1.6rem;
+    font-size: clamp(1.4rem, 3vw, 1.6rem);
 }
 
 small {
@@ -204,6 +191,7 @@ small {
     -webkit-box-shadow: .8rem .8rem 0 #000000;
     box-shadow: .8rem .8rem 0 #000000;
     border-radius: 2rem;
+    margin: 2.4rem;
 }
 
 .card__img {
@@ -213,6 +201,7 @@ small {
 
 .card__content {
     gap: 1.2rem;
+    font-size: 100%;
 }
 
 .card__category {
@@ -221,9 +210,13 @@ small {
     border-radius: .4rem;
     -ms-flex-item-align: start;
     align-self: flex-start;
-    font-size: 1.4rem;
     font-weight: 800;
     color: var(--gray-950);
+}
+
+.card__category,
+.card__date {
+    font-size: clamp(1.2rem, 3vw, 1.4rem);
 }
 
 .card__date {
@@ -231,7 +224,7 @@ small {
 }
 
 .card__title {
-    font-size: 2.4rem;
+    font-size: clamp(2rem, 5vw, 2.4rem);
 }
 
 .card__author {
