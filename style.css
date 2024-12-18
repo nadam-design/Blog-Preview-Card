@@ -1,0 +1,251 @@
+/**************************************************/
+/* CSS RESET
+/**************************************************/
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/**************************************************/
+/* FONTS
+/**************************************************/
+
+/* figtree-500 - latin-ext */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Figtree';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./fonts/figtree-v6-latin-ext-500.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* figtree-800 - latin-ext */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Figtree';
+    font-style: normal;
+    font-weight: 800;
+    src: url('./fonts/figtree-v6-latin-ext-800.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+/**************************************************/
+/* VARIABLES
+/**************************************************/
+
+:root {
+    --gray-950: #111111;
+    --gray-500: #6B6B6B;
+    --yellow: #F4D04E;
+    --white: #fff;
+}
+
+
+/**************************************************/
+/* BODY
+/**************************************************/
+
+html,
+:root {
+    font-size: 10px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: 'Figtree';
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative;
+    background-color: var(--yellow);
+    color: var(--gray-500);
+    font-weight: 500;
+}
+
+body * {
+    line-height: 150%;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+
+/**************************************************/
+/* TYPOGRAPHY
+/**************************************************/
+
+a {
+    color: var(--gray-950);
+    text-decoration: none;
+    -webkit-transition: color .3s;
+    -o-transition: color .3s;
+    transition: color .3s;
+}
+
+a:hover {
+    color: var(--yellow);
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+small {
+    font-size: 1.4rem;
+}
+
+
+/**************************************************/
+/* CLASSES
+/**************************************************/
+
+.d-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.flex-column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.fw-extrabold {
+    font-weight: 700;
+}
+
+
+/**************************************************/
+/* CARD
+/**************************************************/
+
+.card {
+    background-color: var(--white);
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding: 2.4rem;
+    gap: 2.4rem;
+    max-width: 38.4rem;
+    border: .1rem solid var(--gray-950);
+    -webkit-box-shadow: .8rem .8rem 0 #000000;
+    box-shadow: .8rem .8rem 0 #000000;
+    border-radius: 2rem;
+}
+
+.card__img {
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.card__content {
+    gap: 1.2rem;
+}
+
+.card__category {
+    background-color: var(--yellow);
+    padding: .4rem 1.2rem;
+    border-radius: .4rem;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--gray-950);
+}
+
+.card__date {
+    color: var(--gray-950);
+}
+
+.card__title {
+    font-size: 2.4rem;
+}
+
+.card__author {
+    gap: 1.2rem;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: var(--gray-950);
+}
+
+.card__avatar {
+    width: 3.2rem;
+    height: 3.2rem;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 3.2rem;
+    flex: 0 0 3.2rem;
+}
