@@ -145,7 +145,8 @@ p {
     font-size: clamp(1.4rem, 3vw, 1.6rem);
 }
 
-small {
+small,
+time {
     font-size: 1.4rem;
 }
 
@@ -191,7 +192,6 @@ small {
 
 .card__img {
     border-radius: 1rem;
-    overflow: hidden;
 }
 
 .card__content {
